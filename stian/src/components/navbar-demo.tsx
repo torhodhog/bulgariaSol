@@ -50,16 +50,16 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
               description="Production ready Tailwind css components for your next project"
             />
             <ProductItem
-              title="Leilighet 1"
+              title="Panorama Dreams"
               href="https://gomoonbeam.com"
               src="/assets/Bilde5.jpg"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              description="Leilighet på bakkeplan."
             />
             <ProductItem
-              title="Leilighet 2"
+              title="Magic Dreams"
               href="https://userogue.com"
               src="/assets/Bilde6.jpg"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              description="Leilighet i 5.etasje."
             />
           </div>
         </MenuItem>
