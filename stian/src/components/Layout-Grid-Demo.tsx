@@ -14,12 +14,12 @@ const SkeletonOne = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
+        Magic Dreams
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        Magic Dreams er et ferieanlegg som ligger i den sjarmerende byen Sveti Vlas, Bulgaria.
+        Med en beliggenhet rett ved stranden og en kort spasertur til sentrum, er dette det perfekte stedet for en avslappende ferie.
       </p>
     </div>
   );
@@ -29,13 +29,12 @@ const SkeletonTwo = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        House above the clouds
+        Nessebar
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+        Opplev Nessebar, den fredelige gamlebyen som er på UNESCOs verdensarvliste.
+        Her kan du vandre i brosteinsgatene og nyte den vakre utsikten over Svartehavet.
       </p>
     </div>
   );
@@ -44,12 +43,12 @@ const SkeletonThree = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Greens all over
+        Magic Nights 
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        På kveldene kan du nyte en deilig middag på en av de mange restaurantene i området.
+         Her finner du alt fra tradisjonell bulgarsk mat til internasjonale retter.
       </p>
     </div>
   );
@@ -58,12 +57,11 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
+        Panorama Dreams
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        Panorama Dreams gir deg muligheten til å løpe fra stuen og stupe ut i ett av de tre bassengene på området. 
       </p>
     </div>
   );
