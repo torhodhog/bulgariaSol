@@ -38,3 +38,7 @@ next-env.d.ts
 *.jpg
 *.png
 *.mp4
+/public
+*.jpg
+*.png
+*.mp4
