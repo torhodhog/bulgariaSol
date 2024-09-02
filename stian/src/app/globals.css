@@ -80,7 +80,6 @@
   }
 }
 
-/* Legg til dette i din globale CSS-fil, f.eks. styles/globals.css */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -92,4 +91,38 @@
 
 .animate-spin-slow {
   animation: spin 30s linear infinite;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, top 0.1s ease, left 0.1s ease, color 0.1s ease;
+  z-index: 10;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.spin-image {
+  width: 64px;
+  height: 64px;
+  transition: width 0.1s ease, height 0.1s ease;
+}
+
+.sticky-logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  transform: translate(0, 0) scale(0.5);
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
 }
