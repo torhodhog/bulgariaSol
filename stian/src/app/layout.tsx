@@ -23,7 +23,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${inter.className} relative min-h-screen`}>
-        <AuroraBackgroundDemo className="fixed top-0 left-0 w-full h-full -z-10" />
+        {/* <AuroraBackgroundDemo className="fixed top-0 left-0 w-full h-full -z-10" /> */}
         <NavbarDemo />
         <div className="relative z-10 flex min-h-screen flex-col items-center justify-center pt-16">
           <main className="w-full flex-grow">

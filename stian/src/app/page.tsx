@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { LayoutGridDemo } from "@/components/Layout-Grid-Demo";
+import { AnimatedModalDemo } from "@/components/Animated-Modal-Demo";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -44,20 +45,21 @@ export default function Home() {
         <title>Home Page</title>
       </Head>
       <main className="flex flex-col items-center justify-center min-h-screen h-auto">
-        <div className="relative w-full h-screen">
-          <video
-            src="/assets/hero-video.mp4"
-            autoPlay
-            muted
-            loop
-            className="absolute top-0 left-0 w-full h-full object-cover"
-          ></video>
+        <div
+          className="video-container"
+          style={{
+            backgroundImage: "url('/assets/SvetiVlas.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <div
             className={`logo ${isSticky ? "sticky-logo text-black" : "text-white"}`}
             style={logoStyle}
           >
             <div className="flex items-center">
-              <span className="text-8xl font-bold">BULGARIA S</span>
+              <span className="text-7xl font-bold">BULGARIA S</span>
               <div className="relative mx-4 spin-image" style={{ width: '64px', height: '64px' }}>
                 <Image
                   src="/assets/sol.png"
@@ -66,9 +68,10 @@ export default function Home() {
                   className="animate-spin-slow"
                 />
               </div>
-              <span className="text-8xl font-bold">L</span>
+              <span className="text-7xl font-bold">L</span>
             </div>
           </div>
+          <AnimatedModalDemo />
         </div>
         <div className="w-full">
           <LayoutGridDemo />
