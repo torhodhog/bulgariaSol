@@ -148,3 +148,120 @@
   height: 100%;
   object-fit: cover; /* Sørg for at videoen dekker hele containeren */
 }
+
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: green;
+}
+
+.form-calendar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;  /* Sørg for at skjema og kalender tar opp lik høyde */
+  gap: 20px;
+}
+
+.form-container, .calendar-container {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column; 
+  
+}
+
+.calendar-container .react-calendar {
+  width: 100%;  /* Sikrer at kalenderen tar full bredde */
+}
+
+.suggestion-form .form-group {
+  margin-bottom: 15px;
+}
+
+.suggestion-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.suggestion-form .form-group input,
+.suggestion-form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.suggestion-form .submit-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.suggestion-form .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+
+@import 'react-calendar/dist/Calendar.css';

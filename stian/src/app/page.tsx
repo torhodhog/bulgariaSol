@@ -71,7 +71,7 @@ export default function Home() {
               <span className="text-7xl font-bold">L</span>
             </div>
           </div>
-          <AnimatedModalDemo />
+          {/* <AnimatedModalDemo /> */}
         </div>
         <div className="w-full">
           <LayoutGridDemo />

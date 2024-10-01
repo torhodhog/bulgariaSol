@@ -73,15 +73,7 @@ function Navbar({ className }: Readonly<{ className?: string }>) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Kalender">
           <div className="flex flex-col space-y-4 text-sm">
-            <iframe
-              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FOslo&bgcolor=%23B39DDB&showTitle=0&showNav=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=aG9naGVpbUBnbWFpbC5jb20&color=%237986CB"
-              style={{ borderWidth: 0 }}
-              width="300"
-              height="300"
-              frameBorder="0"
-              scrolling="no"
-            ></iframe>
-            <a href="/">Se etter datoer her</a>
+            <a href="/calendar">Se etter datoer her</a>
           </div>
         </MenuItem>
       </Menu>

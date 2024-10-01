@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "babel-eslint",
+  "extends": "next/core-web-vitals",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    // Tilpassede ESLint-regler kan legges her
+  }
 }
