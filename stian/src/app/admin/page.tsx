@@ -43,19 +43,21 @@ const AdminPanel = () => {
   return (
     <div>
       <h1>Admin Panel</h1>
-      <ul>
+      <div className=''>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center p-24">
         {suggestions.map((suggestion) => (
-          <li key={suggestion.id}>
+          <li key={suggestion.id} className="border rounded-lg p-4 bg-gray-200">
             <p><strong>{suggestion.name}</strong> ({suggestion.email})</p>
             <p>Startdato: {suggestion.start_date}</p>
             <p>Sluttdato: {suggestion.end_date}</p>
             <p>{suggestion.suggestion}</p>
             <p>Status: {suggestion.status}</p>
-            <button onClick={() => handleApprove(suggestion.id)}>Godkjenn</button>
-            <button onClick={() => handleReject(suggestion.id)}>Avvis</button>
+            <button className="bg-green-600 text-white mr-4 p-2 rounded-md" onClick={() => handleApprove(suggestion.id)}>Godkjenn</button>
+            <button className="bg-red-600 text-white p-2 rounded-md" onClick={() => handleReject(suggestion.id)}>Avvis</button>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

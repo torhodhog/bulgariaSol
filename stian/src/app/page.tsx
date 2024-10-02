@@ -44,7 +44,7 @@ export default function Home() {
       <Head>
         <title>Home Page</title>
       </Head>
-      <main className="flex flex-col items-center justify-center min-h-screen h-auto">
+      <main className="flex flex-col items-center justify-center min-h-screen h-auto px-4 lg:px-60">
         <div
           className="video-container"
           style={{

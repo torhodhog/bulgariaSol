@@ -61,7 +61,7 @@ const SuggestionForm = () => {
    <MaxWidthWrapper>
     <div className="form-calendar-container mt-12">
       <div className="form-container">
-        <h1>Send inn ditt forslag</h1>
+        <h1 className='p-12 text-center font-extrabold'>Informasjon</h1>
         <form onSubmit={handleSubmit} className="suggestion-form">
           <div className="form-group">
             <label>Navn:</label>
@@ -115,8 +115,9 @@ const SuggestionForm = () => {
         {responseMessage && <p>{responseMessage}</p>}
       </div>
       <div className="calendar-container">
-        <h2>Kalender for tilgjengelighet</h2>
+        <h2 className='text-center p-12 font-extrabold'>Kalender for tilgjengelighet</h2>
         <Calendar
+        className="p-12 mt-12"
           onChange={(value) => {
             if (Array.isArray(value)) {
               if (value[0] !== null) {
