@@ -1,14 +1,16 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { LayoutGridDemo } from "@/components/Layout-Grid-Demo";
 import { AnimatedModalDemo } from "@/components/Animated-Modal-Demo";
+import { TextGenerateEffect } from "@/components/ui/text-generate.effect";
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +31,12 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // Halverer farten på videoen
+    }
+  }, []);
+
   const logoStyle = isSticky
     ? {}
     : {
@@ -45,21 +53,27 @@ export default function Home() {
         <title>Home Page</title>
       </Head>
       <main className="flex flex-col items-center justify-center min-h-screen h-auto px-4 lg:px-60">
-        <div
-          className="video-container"
-          style={{
-            backgroundImage: "url('/assets/SvetiVlas.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
+        <div className="video-container mt-24 relative">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src="/assets/SV.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <TextGenerateEffect
+          className="text-center mt-72"
+          words="Velkommen til Bulgaria"/>
           <div
             className={`logo ${isSticky ? "sticky-logo text-black" : "text-white"}`}
             style={logoStyle}
           >
             <div className="flex items-center">
-              <span className="text-7xl font-bold">BULGARIA S</span>
+              {/* <span className="text-7xl font-bold">BULGARIA S</span>
               <div className="relative mx-4 spin-image" style={{ width: '64px', height: '64px' }}>
                 <Image
                   src="/assets/sol.png"
@@ -67,11 +81,10 @@ export default function Home() {
                   layout="fill"
                   className="animate-spin-slow"
                 />
-              </div>
-              <span className="text-7xl font-bold">L</span>
+              </div> */}
+              {/* <span className="text-7xl font-bold">L</span> */}
             </div>
           </div>
-          {/* <AnimatedModalDemo /> */}
         </div>
         <div className="w-full">
           <LayoutGridDemo />
